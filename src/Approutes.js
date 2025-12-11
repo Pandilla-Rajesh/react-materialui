@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Navbar from './Navbar'
 
 const MainLayout = React.lazy(() => import('./MainLayout/MainLayout'))
 const Home = lazy(() => import('./pages/Home'))
