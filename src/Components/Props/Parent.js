@@ -6,7 +6,6 @@ const Parent = () => {
 
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false)
-    const { error, setError } = useState(false)
 
     const getProduct = async () => {
 
@@ -76,11 +75,11 @@ const Parent = () => {
 
     ]
 
-    const mainCard = {
+    // const mainCard = {
 
-        display: 'flex',
-        flexDirection: 'row',
-    }
+    //     display: 'flex',
+    //     flexDirection: 'row',
+    // }
 
     return (
 
@@ -126,7 +125,7 @@ const Parent = () => {
                     ) : (
                         product?.length > 0 ? (
                             product.slice(0, 20)?.map((pro, index) => (
-                                <div className='col-lg-3' key={ index }>
+                                <div className='col-lg-3 mb-3' key={ index }>
                                     <SubChild product={ pro } />
                                 </div>
                             ))
@@ -169,8 +168,6 @@ const Parent = () => {
 
                         { loading ? (
                             <p>...Loading</p>
-                        ) : error ? (
-                            <p>Something went wrong</p>
                         ) : userDetails?.length > 0 ? (
                             userDetails.slice(0, 10).map((user, index) => (
                                 <div className="card mb-3" key={ index }>
