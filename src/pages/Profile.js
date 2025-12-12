@@ -6,13 +6,13 @@ const Profile = () => {
     // const [user, setUser] = useState([])
     // const [loading, setLoading] = useState(false)
 
-    const [login, setLogin] = useState({
-        username: '',
-        password: ''
-    })
+    // const [login, setLogin] = useState({
+    //     username: '',
+    //     password: ''
+    // })
 
-    const navigate = useNavigate()
-    const [error, setError] = useState({})
+    // const navigate = useNavigate()
+    // const [error, setError] = useState({})
 
     // const handleChange = (event) => {
     //     const { name, value } = event.target
