@@ -1,13 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
         <nav className=' sticky-top shadow-sm top-[10vh] w-full z-50 text-white bg-slate-700'>
             <div className='container-fluid mx-auto flex justify-between px-3 py-3 items-center'>
-                <a href="#" className='navbar-brand'>
-                    <img src={ require('../assets/react-brand.png') } loading='lazy' alt="react-brand" />
-                </a>
+                <Link className='navbar-brand'>
+                    <img src={ require('../assets/react-brand.png') } loading='lazy' alt="react-brand" /></Link>
                 <div className=''>
                     <ul className=' flex gap-3'>
                         <li>
