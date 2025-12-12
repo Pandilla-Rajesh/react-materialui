@@ -4,7 +4,7 @@ function SubChild(props) {
 
     const { product } = props
     const { id, title, description, availabilityStatus, brand,
-        category, discountPercentage, minimumOrderQuantity, thumbnail, price, rating } = product || {}
+        thumbnail, price, rating } = product || {}
 
 
     return (
