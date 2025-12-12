@@ -43,7 +43,7 @@ function Counter() {
                     </div>
                     <div className='row'>
                         <div className='bg-green-800 px-3 py-3 rounded-lg my-2'>
-                            <h2 className='text-center font-semibold text-slate-50 text-3xl'>Welcome Reducer function</h2>
+                            <h2 className='text-center font-semibold text-slate-50 text-3xl'>Welcome Reducer function Page</h2>
                         </div>
                         <div className='flex gap-3 justify-center items-center flex-col'>
                             <div>

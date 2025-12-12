@@ -33,7 +33,7 @@ const Home = () => {
     const LazyComponet = React.lazy(() => Promise.resolve({
         default: () =>
             <React.Fragment>
-                <h2>Welcome to the Lazy Load Componet home page</h2>
+                <h2>Welcome to the Lazy Load Componet home page </h2>
             </React.Fragment>
     }))
 
