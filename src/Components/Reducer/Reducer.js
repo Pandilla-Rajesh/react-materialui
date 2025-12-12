@@ -30,8 +30,8 @@ function Counter() {
             <section>
                 <div className='container ms-auto'>
                     <div className='flex flex-col flex-wrap w-auto items-center justify-center mb-10'>
-                        <h2 className='text-3xl text-slate-50 mb-2'>Clicked Browser Window</h2>
-                        <h1 className='text-4xl mb-3 font-semibold text-slate-50'>Count : { count }</h1>
+                        <h2 className='text-3xl text-slate-800 mb-2'>Clicked Browser Window</h2>
+                        <h1 className='text-4xl mb-3 font-semibold text-orange-600'>Count : { count }</h1>
                         <div className='flex gap-3'>
                             <button className='rounded px-3 py-2 bg-slate-800 text-slate-50'
                                 onClick={ () => setCount((prev) => prev + 1) }>Increment</button>

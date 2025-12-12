@@ -45,9 +45,16 @@ const Home = () => {
                 { showComp && (
                     <Suspense>
                         <LazyComponet />
-
                     </Suspense>
                 ) }
+
+                <div className='card border flex flex-column'>
+                    <div className='card-body'>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, explicabo. Minus et voluptatem amet dolorem minima iusto asperiores recusandae beatae, quibusdam repudiandae
+                            cum natus illo assumenda! Porro, corporis? Exercitationem, repudiandae!</p>
+                    </div>
+                </div>
+
             </article>
 
             <article>
@@ -70,13 +77,13 @@ const Home = () => {
                     <article>
                         <div className='card'>
                             <div className='card-body'>
-                                <h1 className='card-title'>Timer Display</h1>
+                                <h1 className='card-title text-black'>Timer Display</h1>
                                 <div className=' d-flex flex-column align-content-center justify-content-center'>
                                     <div className='d-flex flex-column align-items-center justify-content-center'>
-                                        <h3 className='fs-1 text-white'>
+                                        <h3 className='fs-1 text-block'>
                                             { isrunning ? `Start ${time}` : `Stop ${time}` }
                                         </h3>
-                                        <h1 className='text-white fs-5 mb-3'>{ currentDate.toLocaleString() }</h1>
+                                        <h1 className='text-black fs-5 mb-3'>{ currentDate.toLocaleString() }</h1>
                                     </div>
                                     {/* <h3 className='fs-1 text-white'>Time: { time }</h3> */ }
                                     {/* <p className='fs-6 text-white mb-2'>{ currentDate.toLocaleString() }</p> */ }
