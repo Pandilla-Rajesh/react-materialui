@@ -48,10 +48,21 @@ const Home = () => {
                     </Suspense>
                 ) }
 
-                <div className='card border flex flex-column'>
-                    <div className='card-body'>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, explicabo. Minus et voluptatem amet dolorem minima iusto asperiores recusandae beatae, quibusdam repudiandae
-                            cum natus illo assumenda! Porro, corporis? Exercitationem, repudiandae!</p>
+                <div className='flex flex-row gap-3'>
+                    <div className='card border '>
+                        <img src={ require('../assets/login_new_img.png') } alt="" />
+                        <div className='card-body i'>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, explicabo. Minus et voluptatem amet dolorem minima iusto asperiores recusandae beatae, quibusdam repudiandae
+                                cum natus illo assumenda! Porro, corporis? Exercitationem, repudiandae!</p>
+                        </div>
+                    </div>
+
+                    <div className='card border '>
+                        <div className='card-body '>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+                                explicabo. Minus et voluptatem.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
