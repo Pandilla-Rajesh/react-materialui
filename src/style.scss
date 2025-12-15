@@ -264,3 +264,7 @@ header {
         }
     }
 }
+
+.no-page {
+    max-inline-size: clamp(320px, 100vw, 1440px);
+}

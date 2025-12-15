@@ -27,6 +27,11 @@ const Header = () => {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink to={ { pathname: '/apicalls', hash: '#apicalls' } }
+                                isActive={ ({ isActive }) => isActive ? ' text-lime-600' : '' }>API Calls
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink to={ { pathname: '/props', hash: '#props' } }
                                 className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>Props</NavLink>
                         </li>

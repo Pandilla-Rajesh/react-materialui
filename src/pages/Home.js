@@ -51,7 +51,7 @@ const Home = () => {
                 <div className='flex flex-row gap-3'>
                     <div className='card border '>
                         <img src={ require('../assets/login_new_img.png') } alt="" />
-                        <div className='card-body i'>
+                        <div className='card-body'>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, explicabo. Minus et voluptatem amet dolorem minima iusto asperiores recusandae beatae, quibusdam repudiandae
                                 cum natus illo assumenda! Porro, corporis? Exercitationem, repudiandae!</p>
                         </div>

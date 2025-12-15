@@ -1,11 +1,13 @@
 import React, { Suspense, lazy } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ApiCalls from './Components/ApiCalls'
 
 const MainLayout = React.lazy(() => import('./MainLayout/MainLayout'))
 const Home = lazy(() => import('./pages/Home'))
 const Discuss = lazy(() => import('./pages/Discuss'))
 const Profile = React.lazy(() => import('./pages/Profile'))
 const Props = React.lazy(() => import('./Components/Props/Props'))
+const NoDataFound = lazy(() => import('./NoDataFound'))
 
 function Approutes() {
 
@@ -18,10 +20,12 @@ function Approutes() {
                 { path: 'home', element: (<Suspense fallback={ <div>...Loading</div> }><Home /></Suspense>) },
                 { path: 'discuss', element: (<Suspense fallback={ <div>...Loading</div> }><Discuss /></Suspense>) },
                 { path: 'profile', element: (<Suspense fallback={ <div>...Loading</div> }><Profile /></Suspense>) },
-                { path: 'props', element: (<Suspense fallback={ <div>...Loading</div> }><Props /></Suspense>) }
+                { path: 'props', element: (<Suspense fallback={ <div>...Loading</div> }><Props /></Suspense>) },
+                { path: 'apicalls', element: (<Suspense fallback={ <div>...Loading</div> }><ApiCalls /></Suspense>) }
             ]
 
-        }
+        },
+        { path: '*', element: (<Suspense fallback={ <div>...Loading</div> }><NoDataFound /></Suspense>) }
     ])
     return (
         <Suspense fallback={ <div>...Loading</div> }>
