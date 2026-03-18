@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ParentChild from '../Components/Props/ParentChild'
 // import { useNavigate } from 'react-router-dom'
 
 const Profile = () => {
@@ -67,6 +68,7 @@ const Profile = () => {
             <div className='container'>
                 <div className='info-brand'>
                     <h1>Welcome to the Profile Page Component</h1>
+                    <ParentChild />
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3'>

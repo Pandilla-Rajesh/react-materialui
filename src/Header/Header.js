@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <nav className=' sticky-top shadow-sm top-[10vh] w-full z-50 text-white bg-slate-700'>
-            <div className='container-fluid mx-auto flex justify-between px-3 py-3 items-center'>
+        <nav className=' sticky-top shadow-sm top-[10vh] w-full z-50 text-white bg-slate-700' role='navigation'>
+            <div className='container mx-auto flex justify-between px-3 py-3 items-center'>
                 <Link className='navbar-brand'>
                     <img src={ require('../assets/react-brand.png') } loading='lazy' alt="react-brand" /></Link>
                 <div className=''>
@@ -34,6 +34,12 @@ const Header = () => {
                         <li>
                             <NavLink to={ { pathname: '/props', hash: '#props' } }
                                 className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>Props</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={ { pathname: '/jsonserver', hash: "#json-server" } }
+                                className={ ({ isActive }) => isActive ? ' text-lime-600' : '' }>
+                                Json-Server
+                            </NavLink>
                         </li>
                         {/* <Navbar/> */ }
                     </ul>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Child from './Child'
 import SubChild from './SubChild'
+import ParentChild from './ParentChild'
 
 const Parent = () => {
 
@@ -34,44 +35,6 @@ const Parent = () => {
         { name: 'Ushasri', age: 34, email: 'ushasrichitti@gmail.com', phone: 9701587645, role: 'Home Maker' },
         { name: 'Aadhya', age: 9, email: 'aadhya@gmail.com', phone: 9966843353, role: 'Child One' },
         { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
-        { name: 'Arjun', age: 3, email: 'arjun@gmail.com', phoine: 7867867864, role: 'Child Two' },
 
     ]
 
@@ -85,7 +48,8 @@ const Parent = () => {
 
         <section>
             <article className='container'>
-                <h2 className='display-1'>Welcome to the Parent Component</h2>
+                <h2 className=' text-3xl'>Welcome to the Parent Component</h2>
+                <ParentChild />
             </article>
 
             <article>

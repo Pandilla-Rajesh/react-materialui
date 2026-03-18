@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ApiCalls = () => {
 
@@ -45,7 +46,7 @@ const ApiCalls = () => {
 
     return (
 
-        <section className='bg-gray-100'>
+        <section className=''>
 
             <article className=' container-xl ms-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3'>
@@ -62,24 +63,27 @@ const ApiCalls = () => {
 
             <article className=' container-fluid'>
                 <div className='grid grid-cols-1 my-4'>
-                    <div className='bg-gray-100 p-0 rounded'>
+                    <div className='p-0 rounded'>
                         <h2 className=' text-5xl text-uppercase font-bold text-center mb-3'>
                             Welcome to API Calls</h2>
-
+                        <h3 className=' display-6 text-center'>API Call from useing async await</h3>
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3'>
                             { loading ? (
                                 <p>...Loading</p>
                             ) : (
                                 product?.length > 0 ? (
                                     product?.slice(0, 20)?.map((pro, index) => (
-                                        <div className='bg-gray-50 rounded-lg border border-default 
+                                        <div className='bg-white rounded-lg border border-default 
                                         shadow-sm py-2 px-2'
                                             key={ index }>
-                                            <a href="#">
+                                            <Link to="">
                                                 <img src={ pro.thumbnail || ('../assets/pexels.jpg') } loading='lazy'
-                                                    className='border rounded-t img-fluid w-100' alt={ pro.thumbnail } />
-                                            </a>
-                                            <h2 className='text-2xl'>ID: { pro.id }</h2>
+                                                    className='border rounded-t img-fluid w-100 mb-3' alt={ pro.thumbnail } />
+                                            </Link>
+                                            <div className=' flex items-center justify-between px-2'>
+                                                <h2 className='text-2xl'>ID: { pro.id }</h2>
+                                                <h1 className='text-2xl'>Brand: { pro.brand }</h1>
+                                            </div>
                                         </div>
                                     ))
                                 ) : (

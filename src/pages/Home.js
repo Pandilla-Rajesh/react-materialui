@@ -3,6 +3,10 @@ import Counter from '../Components/Reducer/Reducer'
 
 const Home = () => {
 
+    const [user, setUser] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
+
     const [time, setTime] = useState(0)
     const [currentDate, setCurrentDate] = useState(new Date())
     const [isrunning, setIsRunning] = useState(false)
@@ -17,6 +21,27 @@ const Home = () => {
     const handleShow = () => {
         setShowComp(true)
     }
+
+    const getUser = async () => {
+
+        setLoading(false)
+        try {
+
+            const response = await fetch('https://dummyjson.com/users')
+            const data = await response.json()
+            setUser(data.users)
+            console.log(data.users, 'user data details')
+
+        } catch(error) {
+            setError(error)
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    useEffect(() => {
+        getUser()
+    }, [])
 
     useEffect(() => {
         if(isrunning) {
@@ -38,9 +63,48 @@ const Home = () => {
     }))
 
     return (
-        <section className='info'>
+        <section className='info' role='home'>
 
             <article className="container">
+
+                {/* user-details */ }
+
+                <div className=' grid grid-cols-1'>
+                    <div className=' bg-violet-600 p-3 rounded-5'>
+                        <h2 className='text-center text-2xl text-white font-bold uppercase'>Welcome to User Details</h2>
+                    </div>
+                </div>
+
+                <div className=' grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mb-4 gap-3 my-4'>
+                    { loading ? (
+                        <p>...Loading</p>
+                    ) : (
+                        user?.length > 0 ? (
+                            user?.slice(0, 20)?.map((users, index) => (
+                                <div className=' bg-white border border-slate-400 rounded p-3' key={ index }>
+                                    <h6>{ users.id }</h6>
+                                    <div className=' flex items-center justify-between border-b p-2'>
+                                        <h2 className=' font-semibold text-xl'>FirstName: { users.firstName }</h2>
+                                        <h3 className=' font-semibold text-xl'>LastName:
+                                            <span className=' text-sky-700'>{ users.lastName }</span>
+                                        </h3>
+                                    </div>
+                                    <img src={ users.image } alt={ users.image } className='img-fluid'
+                                        loading='lazy' />
+                                    <div className=' flex items-center justify-between'>
+                                        <p className=' text-sm font-bold text-slate-800'>Age: { users.age }</p>
+                                        <p className=' text-sm font-bold text-slate-800'>Gender: { users.gender }</p>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No Data Found</p>
+                        )
+                    ) }
+                </div>
+
+                {/* end */ }
+
                 <button onClick={ handleShow }>Lazy Comp</button>
                 { showComp && (
                     <Suspense>

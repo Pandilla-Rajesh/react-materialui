@@ -90,9 +90,6 @@ ol {
     padding: 0px;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @media(min-width:560px) {
     .container,
     .container-lg,
@@ -233,7 +230,7 @@ header {
 }
 
 .info {
-    padding: 65px 0px;
+    padding: 15px 0px;
 }
 
 .text-center {
@@ -268,3 +265,7 @@ header {
 .no-page {
     max-inline-size: clamp(320px, 100vw, 1440px);
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

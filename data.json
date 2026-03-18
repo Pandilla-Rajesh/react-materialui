@@ -1,0 +1,46 @@
+{
+    "users": [{
+            "id": 1,
+            "name": "Sathyanarayana",
+            "email": "sathya@gmail.com",
+            "phone": 919966843353
+        },
+        {
+            "id": 2,
+            "name": "Anasurya",
+            "email": "anasurya@gmail.com",
+            "phone": 8008930060
+        },
+        {
+            "id": 3,
+            "name": "Rajesh",
+            "email": "rajesh@gmail.com",
+            "phone": 8247728356
+        },
+        {
+            "id": 4,
+            "name": "Ushasri",
+            "email": "usha@gmail.com",
+            "phone": 9701976383
+        },
+        {
+            "id": 5,
+            "name": "Aadhya",
+            "email": "adhya@gmail.com",
+            "phone": 9703155359
+        },
+        {
+            "id": 6,
+            "name": "Arjun",
+            "email": "arjun@gmail.com",
+            "phone": 9966843353
+        },
+        {
+            "id": 7,
+            "name": "Sathyanarayana",
+            "email": "sathya@gmail.com",
+            "phone": 919966843353
+        }
+
+    ]
+}
