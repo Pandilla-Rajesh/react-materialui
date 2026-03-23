@@ -9,6 +9,7 @@ const Discuss = lazy(() => import('./pages/Discuss'))
 const Profile = React.lazy(() => import('./pages/Profile'))
 const Props = React.lazy(() => import('./Components/Props/Props'))
 const JsonPage = React.lazy(() => import('./Components/JSON/JsonPage'))
+const CustomApi = React.lazy(() => import('./CustomHooks/CustomApi'))
 const NoDataFound = lazy(() => import('./NoDataFound'))
 
 function Approutes() {
@@ -26,7 +27,8 @@ function Approutes() {
                 { path: 'profile', element: (<Suspense fallback={ <div>...Loading</div> }><Profile /></Suspense>) },
                 { path: 'props', element: (<Suspense fallback={ <div>...Loading</div> }><Props /></Suspense>) },
                 { path: 'apicalls', element: (<Suspense fallback={ <div>...Loading</div> }><ApiCalls /></Suspense>) },
-                { path: 'jsonserver', element: (<Suspense fallback={ <div>...Loading</div> }><JsonPage /></Suspense>) }
+                { path: 'jsonpage', element: (<Suspense fallback={ <div>...Loading</div> }><JsonPage /></Suspense>) },
+                { path: 'customhook', element: (<Suspense fallback={ <div>...Loading</div> }><CustomApi /></Suspense>) }
             ]
 
         },

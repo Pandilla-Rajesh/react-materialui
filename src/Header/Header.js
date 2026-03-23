@@ -36,11 +36,15 @@ const Header = () => {
                                 className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>Props</NavLink>
                         </li>
                         <li>
-                            <NavLink to={ { pathname: '/jsonserver', hash: "#json-server" } }
-                                className={ ({ isActive }) => isActive ? ' text-lime-600' : '' }>
-                                Json-Server
-                            </NavLink>
+                            <NavLink to={ { pathname: '/jsonpage', hash: '#jsonserver' } }
+                                className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>Json-Server</NavLink>
                         </li>
+
+                        <li>
+                            <NavLink to={ { pathname: '/customhook', hash: '#customhook' } }
+                                className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>CustomHook</NavLink>
+                        </li>
+
                         {/* <Navbar/> */ }
                     </ul>
                 </div>
