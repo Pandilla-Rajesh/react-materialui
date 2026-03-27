@@ -1,14 +1,15 @@
+import axios from 'axios'
 import React, { useCallback, useEffect, useState } from 'react'
 
 function useFetch(url) {
 
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
     const fetchProduct = useCallback(async () => {
 
-        setLoading(false)
+        setLoading(true)
         try {
             const res = await fetch(url)
             if(!res.ok) {
@@ -26,11 +27,27 @@ function useFetch(url) {
 
     }, [url])
 
+    const addProduct = async (newproduct) => {
+
+        setLoading(true)
+        try {
+
+            const res = await axios.post(url, newproduct)
+            setProduct((prev) => [...prev, res.data])
+            return res.data
+
+        } catch(err) {
+            setError(err.message)
+        } finally {
+            setLoading(false)
+        }
+    }
+
     useEffect(() => {
         fetchProduct()
     }, [fetchProduct])
 
-    return { product, loading, error, refetch: fetchProduct }
+    return { product, loading, error, addProduct, refetch: fetchProduct }
 }
 
 export default useFetch

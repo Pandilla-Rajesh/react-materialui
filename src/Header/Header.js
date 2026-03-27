@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <nav className=' sticky-top shadow-sm top-[10vh] w-full z-50 text-white bg-slate-700' role='navigation'>
-            <div className='container mx-auto flex justify-between px-3 py-3 items-center'>
+        <nav className=' sticky-top shadow-sm top-[10vh] w-full z-50 text-white bg-black' role='navigation'>
+            <div className='container mx-auto flex justify-between px-3 py-2 items-center'>
                 <Link className='navbar-brand'>
                     <img src={ require('../assets/react-brand.png') } loading='lazy' alt="react-brand" /></Link>
                 <div className=''>
@@ -14,35 +14,35 @@ const Header = () => {
                                 Home
                                 </Link> */}
                             <NavLink to={ { pathname: '/home', hash: '#home' } }
-                                className={ ({ isActive }) => isActive ? ' text-lime-600' : '' }>Home</NavLink>
+                                className={ ({ isActive }) => isActive ? ' text-cyan-500 font-bold' : '' }>Home</NavLink>
                         </li>
                         <li>
                             <NavLink to={ { pathname: '/discuss', hash: '#discuss' } }
-                                className={ ({ isActive }) => isActive ? ' text-lime-600 font-semibold' : '' }>Discuss</NavLink>
+                                className={ ({ isActive }) => isActive ? ' text-cyan-500 font-bold' : '' }>Discuss</NavLink>
                         </li>
                         <li>
                             <NavLink to={ { pathname: '/profile', hash: '#profile' } }
-                                className={ ({ isActive }) => isActive ? ' text-lime-600 font-semibold' : '' }>
+                                className={ ({ isActive }) => isActive ? 'text-cyan-500 font-bold' : '' }>
                                 Profile
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={ { pathname: '/apicalls', hash: '#apicalls' } }
-                                isActive={ ({ isActive }) => isActive ? ' text-lime-600' : '' }>API Calls
+                                isActive={ ({ isActive }) => isActive ? ' text-cyan-500 font-bold' : '' }>API Calls
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={ { pathname: '/props', hash: '#props' } }
-                                className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>Props</NavLink>
+                                className={ ({ isActive }) => isActive ? 'text-cyan-500 font-bold' : '' }>Props</NavLink>
                         </li>
                         <li>
                             <NavLink to={ { pathname: '/jsonpage', hash: '#jsonserver' } }
-                                className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>Json-Server</NavLink>
+                                className={ ({ isActive }) => isActive ? 'text-cyan-500 font-bold' : '' }>Json-Server</NavLink>
                         </li>
 
                         <li>
                             <NavLink to={ { pathname: '/customhook', hash: '#customhook' } }
-                                className={ ({ isActive }) => isActive ? 'text-lime-600' : '' }>CustomHook</NavLink>
+                                className={ ({ isActive }) => isActive ? 'text-cyan-500 font-bold' : '' }>CustomHook</NavLink>
                         </li>
 
                         {/* <Navbar/> */ }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import Counter from '../Components/Reducer/Reducer'
+import OnLoadPopUp from '../OnLoadPopUp/OnLoadPopUp'
 
 const Home = () => {
 
